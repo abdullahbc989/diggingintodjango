@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+    {% block content %}
+      <main class="container" role="main">
+        <div class="treasure panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ treasure.name }}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="treasure-photo-detail">
+              <img src="{{ treasure.image.url }}" height="200">
+            </div>
+            <table class="treasure-table">
+              <tr>
+                <th>
+                  <img src="{% static "images/material.png" %}">
+                  Material:
+                </th>
+                <td>{{ treasure.material }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </main>
+    {% endblock %}
